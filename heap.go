@@ -1,4 +1,4 @@
-package main
+package doodle
 
 import (
 	"container/heap"
