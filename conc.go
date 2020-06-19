@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-func main() {
+//Run runs the program
+func Run() {
 	jobs := make(chan int, 100)
 	results := make(chan int, 100)
 
