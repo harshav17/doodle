@@ -1,16 +1,15 @@
-package doodle
+package xoodle
 
 import "fmt"
 
-//Run runs the program
-func Run() {
+//TestCores runs the program
+func TestCores(n int) {
 	jobs := make(chan int, 100)
 	results := make(chan int, 100)
 
-	go worker(jobs, results)
-	go worker(jobs, results)
-	go worker(jobs, results)
-	go worker(jobs, results)
+	for i := 0; i < n; i++ {
+		go worker(jobs, results)
+	}
 
 	for i := 0; i < 100; i++ {
 		jobs <- i

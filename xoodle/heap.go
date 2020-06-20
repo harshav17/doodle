@@ -1,4 +1,4 @@
-package doodle
+package xoodle
 
 import (
 	"container/heap"
