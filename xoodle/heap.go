@@ -30,7 +30,7 @@ func (h *intHeap) Pop() interface{} {
 func Run2() {
 	h := &intHeap{10, 99, 7, 16, 5}
 	heap.Init(h)
-	heap.Push(h, 3)
+	heap.Push(h, "blue")
 	fmt.Printf("minimum: %d\n", (*h)[0])
 	// minimum: 3
 
@@ -41,4 +41,7 @@ func Run2() {
 		fmt.Printf("%d \n", heap.Pop(h))
 	}
 	// 3 5 7 10 16 99
+}
+
+type heapInt interface {
 }
