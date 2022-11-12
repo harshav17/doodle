@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"fmt"
@@ -7,6 +7,7 @@ import (
 	"gonum.org/v1/gonum/stat"
 )
 
+// WIP
 func stats() {
 	xs := []float64{
 		32.32, 56.98, 21.52, 44.32,
@@ -20,8 +21,4 @@ func stats() {
 	rate := float64(0.5)
 	npv := fin.NetPresentValue(rate, xs)
 	fmt.Printf("npv=%v\n", npv)
-}
-
-func main() {
-	stats()
 }

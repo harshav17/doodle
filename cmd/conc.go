@@ -1,9 +1,25 @@
-package xoodle
+package cmd
 
-import "fmt"
+import (
+	"fmt"
 
-//TestCores runs the program
-func TestCores(n int) {
+	"github.com/spf13/cobra"
+)
+
+func init() {
+	rootCmd.AddCommand(concCommand)
+}
+
+var concCommand = &cobra.Command{
+	Use:   "conc",
+	Short: "simple program to test computer's cores",
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("Get ready for some heat")
+		testCores(10)
+	},
+}
+
+func testCores(n int) {
 	jobs := make(chan int, 100)
 	results := make(chan int, 100)
 
