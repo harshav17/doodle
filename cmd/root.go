@@ -11,8 +11,7 @@ var rootCmd = &cobra.Command{
 	Use:   "doodle",
 	Short: "various helper methods for day-day functionality",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("inside command")
-		// Do Stuff Here
+		fmt.Println("Does nothing")
 	},
 }
 
