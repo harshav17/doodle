@@ -3,8 +3,9 @@
 ## Installation
 
 1. Clone repo
-2. Add bin to PATH: `export PATH=$PATH:/Users/harsha/go/bin`
-3. Install doodle from repo's root `go install`
+2. brew install vips
+3. Add bin to PATH: `export PATH=$PATH:/Users/harsha/go/bin`
+4. Install doodle from repo's root `go install`
 
 ## Usage
 
