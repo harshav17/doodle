@@ -3,7 +3,7 @@
 ## Installation
 
 1. Clone repo
-2. brew install vips
+2. Install vips image processing library: `brew install vips`
 3. Add bin to PATH: `export PATH=$PATH:/Users/harsha/go/bin`
 4. Install doodle from repo's root `go install`
 
