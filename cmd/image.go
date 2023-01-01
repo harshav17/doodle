@@ -9,7 +9,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
+
+var size int
+
 func init() {
+	imgCommand.Flags().IntVarP(&size, "size", "s", 400, "times to echo the input")
 	rootCmd.AddCommand(imgCommand)
 }
 
@@ -37,8 +41,8 @@ func processImage(file string) error {
 
 	options := bimg.Options{
 		NoAutoRotate: true,
-		Width:        400,
-		Height:       400,
+		Width:        size,
+		Height:       size,
 		Crop:         true,
 		Gravity:      bimg.GravityCentre,
 		Type:         bimg.WEBP,
